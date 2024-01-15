@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".CameraActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/viewFinder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/capturedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/takeNewPictureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zrób nowe"
+            android:visibility="invisible"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/takePictureButton"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:text="Zrób zdjęcie"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/usePictureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Użyj zdjęcia"
+            android:visibility="invisible"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/switchCameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zmień aparat"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:gravity="center"/>
+
+
+    <Button
+        android:id="@+id/toggleFlashButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Włącz lampę"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"/>
+
+
+
+
+</LinearLayout>
